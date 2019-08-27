@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search renders properly 1`] = `
+"<div>
+  <form onSubmit={[Function]}>
+    <input type=\\"text\\" name=\\"text\\" placeholder=\\"Search Images...\\" value=\\"\\" onChange={[Function]} />
+    <input type=\\"submit\\" value=\\"Search\\" />
+  </form>
+</div>"
+`;

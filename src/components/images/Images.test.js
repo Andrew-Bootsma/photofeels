@@ -8,4 +8,8 @@ describe('Images', () => {
   it('renders properly', () => {
     expect(images.debug()).toMatchSnapshot();
   });
+
+  it('initializes the images and loading `props`', () => {
+    images.setProps({ images: [], loading: false });
+  });
 });

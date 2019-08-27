@@ -1,54 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ImageItem from './ImageItem';
+import Spinner from '../layout/Spinner';
+import PropTypes from 'prop-types';
 
-class Images extends Component {
-  state = {
-    images: [
-      {
-        id: '1',
-        name: 'James Example',
-        profile_image: {
-          small:
-            'http://vignette1.wikia.nocookie.net/marveldatabase/images/d/d7/Iron_Man_Armor_Model_2_MK_I.jpg/revision/latest/scale-to-width-down/120?cb=20170122055205'
-        },
-        links: {
-          html: 'https://google.com'
-        }
-      },
-      {
-        id: '2',
-        name: 'Andrew Example',
-        profile_image: {
-          small:
-            'http://vignette3.wikia.nocookie.net/marvelvscapcom/images/b/be/Thor-mvc1.gif/revision/latest?cb=20141212210530'
-        },
-        links: {
-          html: 'https://andrewbootsma.com'
-        }
-      },
-      {
-        id: '3',
-        name: 'Josh Example',
-        profile_image: {
-          small:
-            'https://www.spriters-resource.com/resources/sheet_icons/63/66590.png'
-        },
-        links: {
-          html: 'https://duckduckgo.com'
-        }
-      }
-    ]
-  };
-
-  render() {
+const Images = ({ images, loading }) => {
+  if (loading) {
+    return <Spinner />;
+  } else {
     return (
       <div>
-        {this.state.images.map(image => (
+        {images.map(image => (
           <ImageItem key={image.id} image={image} />
         ))}
       </div>
     );
   }
-}
+};
+
+Images.propTypes = {
+  images: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired
+};
 
 export default Images;
