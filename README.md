@@ -1,6 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a photo searching and photographer info site created for my friends at Fullscript.
 
-## Available Scripts
+## To Build
 
 In the project directory, you can run:
 
@@ -10,59 +10,20 @@ Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+## Photo Feels!
+![alt text](https://andrewbootsma.com/wp-content/uploads/2019-08-28-133831_1366x768_scrot.png)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### What I am proud of
+- The react is very meticulously done and is where I spent the bulk of my time
+- I implemented a few different features of the api to add to the experience of the app
 
-### `npm run build`
+### If I had more time
+- I would finish all of the testing, I wanted to focus on what I am best at which is why I left testing for the end
+  - I managed to install Jest and Enzyme and begin setting up my tests but I could not fully test my features
+  - I am still learning how to TDD and BDD from the start
+- I am happy with about 90% of my SASS but I could clean up a few sections, such as the photographer profile page
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Production
+- I did push this app to production at https://photo-feels-by-andrew-bootsma.netlify.com/
+- based on my UnsplashState.js, I set an Environment Variable in Netlify of UNSPLASH_CLIENT_ID to my client id but I am still getting a 401 error when trying to make the API call
