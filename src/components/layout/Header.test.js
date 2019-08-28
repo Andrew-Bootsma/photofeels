@@ -5,7 +5,7 @@ import Header from './Header';
 describe('Header', () => {
   const header = shallow(<Header />);
 
-  it('renders properly', () => {
-    expect(header.debug()).toMatchSnapshot();
+  it('renders correctly', () => {
+    expect(header).toMatchSnapshot();
   });
 });

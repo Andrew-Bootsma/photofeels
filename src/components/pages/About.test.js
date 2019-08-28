@@ -5,7 +5,7 @@ import About from './About';
 describe('About', () => {
   const about = shallow(<About />);
 
-  it('renders properly', () => {
-    expect(about.debug()).toMatchSnapshot();
+  it('renders correctly', () => {
+    expect(about).toMatchSnapshot();
   });
 });

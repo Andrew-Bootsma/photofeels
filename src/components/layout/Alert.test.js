@@ -5,7 +5,7 @@ import Alert from './Alert';
 describe('Alert', () => {
   const alert = shallow(<Alert />);
 
-  it('renders properly', () => {
-    expect(alert.debug()).toMatchSnapshot();
+  it('renders correctly', () => {
+    expect(alert).toMatchSnapshot();
   });
 });

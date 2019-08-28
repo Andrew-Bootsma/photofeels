@@ -6,11 +6,7 @@ const Alert = () => {
 
   const { alert } = alertContext;
 
-  return (
-    alert !== null && (
-      <div className={`alert alert-${alert.type}`}>{alert.msg}</div>
-    )
-  );
+  return alert !== null && <div>{alert.msg}</div>;
 };
 
 export default Alert;

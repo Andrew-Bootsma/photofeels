@@ -5,7 +5,7 @@ import Search from './Search';
 describe('Search', () => {
   const search = shallow(<Search />);
 
-  it('renders properly', () => {
-    expect(search.debug()).toMatchSnapshot();
+  it('renders correctly', () => {
+    expect(search).toMatchSnapshot();
   });
 });

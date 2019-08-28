@@ -5,7 +5,7 @@ import Spinner from './Spinner';
 describe('Spinner', () => {
   const spinner = shallow(<Spinner />);
 
-  it('renders properly', () => {
-    expect(spinner.debug()).toMatchSnapshot();
+  it('renders correctly', () => {
+    expect(spinner).toMatchSnapshot();
   });
 });

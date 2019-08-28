@@ -10,6 +10,14 @@ import {
   GET_PHOTOS
 } from '../types';
 
+let unsplashClientId;
+
+if (process.env.NODE_ENV !== 'production') {
+  unsplashClientId = process.env.REACT_APP_UNSPLASH_CLIENT_ID;
+} else {
+  unsplashClientId = process.env.UNSPLASH_CLIENT_ID;
+}
+
 const UnsplashState = props => {
   const initialState = {
     images: [],
@@ -27,7 +35,7 @@ const UnsplashState = props => {
     const res = await axios.get('https://api.unsplash.com/search/photos', {
       params: { query: `${text}` },
       headers: {
-        Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_CLIENT_ID}`
+        Authorization: `Client-ID ${unsplashClientId}`
       }
     });
 
@@ -43,7 +51,7 @@ const UnsplashState = props => {
 
     const res = await axios.get(`https://api.unsplash.com/users/${username}`, {
       headers: {
-        Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_CLIENT_ID}`
+        Authorization: `Client-ID ${unsplashClientId}`
       }
     });
 
@@ -61,7 +69,7 @@ const UnsplashState = props => {
       `https://api.unsplash.com/users/${username}/photos?per_page=5`,
       {
         headers: {
-          Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_CLIENT_ID}`
+          Authorization: `Client-ID ${unsplashClientId}`
         }
       }
     );

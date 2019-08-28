@@ -5,7 +5,7 @@ import PhotoItem from './PhotoItem';
 describe('PhotoItem', () => {
   const photoItem = shallow(<PhotoItem />);
 
-  it('renders properly', () => {
-    expect(photoItem.debug()).toMatchSnapshot();
+  it('renders correctly', () => {
+    expect(photoItem).toMatchSnapshot();
   });
 });
