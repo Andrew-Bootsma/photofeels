@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const ImageItem = ({ image: { urls, user } }) => {
   return (
@@ -8,7 +9,7 @@ const ImageItem = ({ image: { urls, user } }) => {
       <h3>{user.name}</h3>
 
       <div>
-        <a href={user.links.html}>More</a>
+        <Link to={`/user/${user.username}`}>More</Link>
       </div>
     </div>
   );
