@@ -1,29 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import logo from '../../img/logo.png';
+import Search from '../images/Search';
 
-const Header = ({ logo }) => {
+const Header = () => {
   return (
     <header className='header'>
-      <h1>{logo}</h1>
-      <ul>
-        <li>
+      {/* eslint-disable-next-line */}
+      <img src={logo} alt='Photo Feels logo' className='logo' />
+
+      <Search />
+      <nav className='user-nav'>
+        <div className='user-nav__link'>
           <Link to='/'>Home</Link>
-        </li>
-        <li>
+        </div>
+        <div className='user-nav__link'>
           <Link to='/about'>About</Link>
-        </li>
-      </ul>
+        </div>
+      </nav>
     </header>
   );
-};
-
-Header.defaultProps = {
-  logo: 'Photo Feels'
-};
-
-Header.propTypes = {
-  logo: PropTypes.string.isRequired
 };
 
 export default Header;

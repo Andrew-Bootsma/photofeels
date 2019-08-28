@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 
 const PhotoItem = ({ photo }) => {
   return (
-    <div>
-      <h3>
-        <img src={photo.urls.small} alt='' />
-      </h3>
+    <div className='image-item'>
+      <img className='image-item__image' src={photo.urls.small} alt='' />
     </div>
   );
 };
