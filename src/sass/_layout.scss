@@ -15,7 +15,7 @@
 
 .header {
   font-size: 1.4rem;
-  height: 7rem;
+  height: 13rem;
   background-color: #fff;
   border-bottom: var(--line);
 
@@ -27,5 +27,18 @@
     flex-wrap: wrap;
     align-content: space-around;
     height: 11rem;
+  }
+}
+
+.image-item {
+  text-align: center;
+  padding: 5rem;
+
+  &__image {
+    border: 1px solid #021a40;
+  }
+
+  &__photographer {
+    font-size: 2rem;
   }
 }

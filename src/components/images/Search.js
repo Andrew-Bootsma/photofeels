@@ -1,6 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, Fragment } from 'react';
 import UnsplashContext from '../../context/unsplash/unsplashContext';
 import AlertContext from '../../context/alert/alertContext';
+import MagnifyingGlass from '../../img/magnifying-glass.png';
 
 const Search = () => {
   const unsplashContext = useContext(UnsplashContext);
@@ -21,21 +22,27 @@ const Search = () => {
   const onChange = e => setText(e.target.value);
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
+    <Fragment>
+      <form onSubmit={onSubmit} className='search'>
         <input
           type='text'
           name='text'
           placeholder='Search Images...'
           value={text}
           onChange={onChange}
+          className='search__input'
         />
-        <input type='submit' value='Search' />
+        <input className='btn search__button' type='submit' value='Search' />
       </form>
       {unsplashContext.images.length > 0 && (
-        <button onClick={unsplashContext.clearImages}>Clear</button>
+        <button
+          className='btn search__clear-button'
+          onClick={unsplashContext.clearImages}
+        >
+          Clear
+        </button>
       )}
-    </div>
+    </Fragment>
   );
 };
 

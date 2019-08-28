@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom';
 
 const ImageItem = ({ image: { urls, user } }) => {
   return (
-    <div>
-      <img src={urls.small} alt='' />
-      <h3>{user.name}</h3>
-
-      <div>
-        <Link to={`/user/${user.username}`}>More</Link>
-      </div>
+    <div className='image-item'>
+      <img className='image-item__image' src={urls.small} alt='' />
+      <p className='image-item__photographer'>
+        Photographer:{' '}
+        <Link className='btn-inline' to={`/user/${user.username}`}>
+          {user.name}
+          <span>&rarr;</span>
+        </Link>
+      </p>
     </div>
   );
 };

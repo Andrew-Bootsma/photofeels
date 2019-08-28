@@ -39,34 +39,67 @@ const Photographer = ({ match }) => {
 
   return (
     <Fragment>
-      <Link to='/'>Back To Search</Link>
-      <img src={profile_image ? profile_image.large : ''} alt='' />
-      <h1>{name}</h1>
-      {location && <p>Location: {location}</p>}
-      {bio && (
-        <Fragment>
-          <h3>Bio</h3>
-          <p>{bio}</p>
-        </Fragment>
-      )}
-      <a href={links ? links.html : ''}>Visit Unsplash Profile</a>
-      <ul>
-        <li>
-          <strong>Username: </strong> {username}
-        </li>
-        <li>
-          {portfolio_url && (
-            <Fragment>
-              <strong>Portfolio: </strong>{' '}
-              <a href={portfolio_url}>Click here</a>
-            </Fragment>
-          )}
-        </li>
-      </ul>
-      <div>Followers: {followers_count}</div>
-      <div>Following: {following_count}</div>
-      <div>Photos: {total_photos}</div>
-      <div>Collections: {total_collections}</div>
+      <div className='photographer'>
+        <span className='photographer__back'>
+          <Link className='btn photographer__back-btn' to='/'>
+            Back To Search
+          </Link>
+        </span>
+        <img
+          className='photographer__profile-img'
+          src={profile_image ? profile_image.large : ''}
+          alt=''
+        />
+        <span className='photographer__details'>
+          <span className='photographer__details-info'>
+            <h1>{name}</h1>
+            {location && (
+              <p>
+                <strong>Location: </strong>
+                {location}
+              </p>
+            )}
+            {bio && (
+              <Fragment>
+                <h3>Bio</h3>
+                <p>{bio}</p>
+              </Fragment>
+            )}
+            <a className='btn-inline' href={links ? links.html : ''}>
+              Visit Unsplash Profile
+            </a>
+            <ul>
+              <li>
+                <strong>Username: </strong> {username}
+              </li>
+              {portfolio_url && (
+                <li>
+                  <strong>Portfolio: </strong>{' '}
+                  <a className='btn-inline' href={portfolio_url}>
+                    Click here
+                  </a>
+                </li>
+              )}
+            </ul>
+            <div>
+              <strong>Followers: </strong>
+              {followers_count}
+            </div>
+            <div>
+              <strong>Following: </strong>
+              {following_count}
+            </div>
+            <div>
+              <strong>Photos: </strong>
+              {total_photos}
+            </div>
+            <div>
+              <strong>Collections: </strong>
+              {total_collections}
+            </div>
+          </span>
+        </span>
+      </div>
 
       <Photos photos={photos} />
     </Fragment>
