@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Header renders properly 1`] = `
-"<header className=\\"header\\">
-  <h1>
-    Photo Feels
-  </h1>
-</header>"
-`;

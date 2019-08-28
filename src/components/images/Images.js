@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ImageItem from './ImageItem';
 import Spinner from '../layout/Spinner';
-import PropTypes from 'prop-types';
+import UnsplashContext from '../../context/unsplash/unsplashContext';
 
-const Images = ({ images, loading }) => {
+const Images = () => {
+  const unsplashContext = useContext(UnsplashContext);
+
+  const { loading, images } = unsplashContext;
+
   if (loading) {
     return <Spinner />;
   } else {
@@ -15,11 +19,6 @@ const Images = ({ images, loading }) => {
       </div>
     );
   }
-};
-
-Images.propTypes = {
-  images: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired
 };
 
 export default Images;

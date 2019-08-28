@@ -1,49 +1,42 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useContext } from 'react';
+import UnsplashContext from '../../context/unsplash/unsplashContext';
+import AlertContext from '../../context/alert/alertContext';
 
-export class Search extends Component {
-  state = {
-    text: ''
-  };
+const Search = () => {
+  const unsplashContext = useContext(UnsplashContext);
+  const alertContext = useContext(AlertContext);
 
-  static propTypes = {
-    searchImages: PropTypes.func.isRequired,
-    clearImages: PropTypes.func.isRequired,
-    showClear: PropTypes.bool.isRequired,
-    setAlert: PropTypes.func.isRequired
-  };
+  const [text, setText] = useState('');
 
-  onSubmit = e => {
+  const onSubmit = e => {
     e.preventDefault();
-    if (this.state.text === '') {
-      this.props.setAlert('Please enter something', 'light');
+    if (text === '') {
+      alertContext.setAlert('Please enter something', 'light');
     } else {
-      this.props.searchImages(this.state.text);
-      this.setState({ text: '' });
+      unsplashContext.searchImages(text);
+      setText('');
     }
   };
 
-  onChange = e => this.setState({ [e.target.name]: e.target.value });
+  const onChange = e => setText(e.target.value);
 
-  render() {
-    const { showClear, clearImages } = this.props;
-
-    return (
-      <div>
-        <form onSubmit={this.onSubmit}>
-          <input
-            type='text'
-            name='text'
-            placeholder='Search Images...'
-            value={this.state.text}
-            onChange={this.onChange}
-          />
-          <input type='submit' value='Search' />
-        </form>
-        {showClear && <button onClick={clearImages}>Clear</button>}
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <form onSubmit={onSubmit}>
+        <input
+          type='text'
+          name='text'
+          placeholder='Search Images...'
+          value={text}
+          onChange={onChange}
+        />
+        <input type='submit' value='Search' />
+      </form>
+      {unsplashContext.images.length > 0 && (
+        <button onClick={unsplashContext.clearImages}>Clear</button>
+      )}
+    </div>
+  );
+};
 
 export default Search;
