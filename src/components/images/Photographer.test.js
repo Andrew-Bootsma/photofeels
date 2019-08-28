@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import User from './User';
+import Photographer from './Photographer';
 
-describe('User', () => {
-  const user = shallow(<User />);
+describe('Photographer', () => {
+  const photographer = shallow(<ImageItem />);
 
-  it('renders properly', () => {
-    expect(user.debug()).toMatchSnapshot();
+  it('renders correctly', () => {
+    expect(photographer).toMatchSnapshot();
   });
 });

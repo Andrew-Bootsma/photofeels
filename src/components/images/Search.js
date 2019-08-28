@@ -1,7 +1,6 @@
 import React, { useState, useContext, Fragment } from 'react';
 import UnsplashContext from '../../context/unsplash/unsplashContext';
 import AlertContext from '../../context/alert/alertContext';
-import MagnifyingGlass from '../../img/magnifying-glass.png';
 
 const Search = () => {
   const unsplashContext = useContext(UnsplashContext);
