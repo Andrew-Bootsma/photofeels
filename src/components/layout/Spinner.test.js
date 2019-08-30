@@ -6,6 +6,6 @@ describe('Spinner', () => {
   const spinner = shallow(<Spinner />);
 
   it('renders correctly', () => {
-    expect(spinner).toMatchSnapshot();
+    expect(spinner.debug()).toMatchSnapshot();
   });
 });

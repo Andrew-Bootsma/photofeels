@@ -6,6 +6,6 @@ describe('About', () => {
   const about = shallow(<About />);
 
   it('renders correctly', () => {
-    expect(about).toMatchSnapshot();
+    expect(about.debug()).toMatchSnapshot();
   });
 });

@@ -6,6 +6,6 @@ describe('Photos', () => {
   const photos = shallow(<Photos />);
 
   it('renders correctly', () => {
-    expect(photos).toMatchSnapshot();
+    expect(photos.debug()).toMatchSnapshot();
   });
 });

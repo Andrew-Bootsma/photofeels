@@ -1,3 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders correctly 1`] = `ShallowWrapper {}`;
+exports[`App renders correctly 1`] = `
+"<UnsplashState>
+  <AlertState>
+    <BrowserRouter>
+      <div className=\\"container\\">
+        <Header />
+        <Alert />
+        <Switch>
+          <Route exact={true} path=\\"/\\" component={[Function: Home]} />
+          <Route exact={true} path=\\"/about\\" component={[Function: About]} />
+          <Route exact={true} path=\\"/user/:username\\" component={[Function: Photographer]} />
+          <Route component={[Function: NotFound]} />
+        </Switch>
+      </div>
+    </BrowserRouter>
+  </AlertState>
+</UnsplashState>"
+`;

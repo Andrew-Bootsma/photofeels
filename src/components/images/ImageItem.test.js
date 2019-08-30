@@ -6,6 +6,6 @@ describe('ImageItem', () => {
   const imageItem = shallow(<ImageItem />);
 
   it('renders correctly', () => {
-    expect(imageItem).toMatchSnapshot();
+    expect(imageItem.debug()).toMatchSnapshot();
   });
 });
