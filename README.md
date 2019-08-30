@@ -40,8 +40,7 @@ The page will reload if you make edits.<br>
 - I am happy with about 90% of my SASS but I could clean up a few sections, such as the photographer profile page
 
 ### Production
-- I did push this app to production at https://photo-feels-by-andrew-bootsma.netlify.com/
-- based on my UnsplashState.js, I set an Environment Variable in Netlify of UNSPLASH_CLIENT_ID to my client id but I am still getting a 401 error when trying to make the API call, therefore I am not sure what the bug is.
+- https://photo-feels-by-andrew-bootsma.netlify.com/
 
 ### Stack Description
 - I used create-react-app to generate a boilerplate react app
