@@ -6,6 +6,6 @@ describe('NotFound', () => {
   const notFound = shallow(<NotFound />);
 
   it('renders correctly', () => {
-    expect(notFound).toMatchSnapshot();
+    expect(notFound.debug()).toMatchSnapshot();
   });
 });

@@ -6,6 +6,6 @@ describe('Search', () => {
   const search = shallow(<Search />);
 
   it('renders correctly', () => {
-    expect(search).toMatchSnapshot();
+    expect(search.debug()).toMatchSnapshot();
   });
 });

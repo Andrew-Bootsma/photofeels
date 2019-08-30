@@ -6,6 +6,6 @@ describe('Home', () => {
   const home = shallow(<Home />);
 
   it('renders correctly', () => {
-    expect(home).toMatchSnapshot();
+    expect(home.debug()).toMatchSnapshot();
   });
 });

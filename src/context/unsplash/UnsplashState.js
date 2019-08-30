@@ -10,13 +10,7 @@ import {
   GET_PHOTOS
 } from '../types';
 
-let unsplashClientId;
-
-if (process.env.NODE_ENV !== 'production') {
-  unsplashClientId = process.env.REACT_APP_UNSPLASH_CLIENT_ID;
-} else {
-  unsplashClientId = process.env.UNSPLASH_CLIENT_ID;
-}
+const unsplashClientId = process.env.REACT_APP_UNSPLASH_CLIENT_ID;
 
 const UnsplashState = props => {
   const initialState = {

@@ -6,6 +6,6 @@ describe('Alert', () => {
   const alert = shallow(<Alert />);
 
   it('renders correctly', () => {
-    expect(alert).toMatchSnapshot();
+    expect(alert.debug()).toMatchSnapshot();
   });
 });

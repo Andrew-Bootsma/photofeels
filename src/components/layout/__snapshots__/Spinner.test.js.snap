@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Spinner renders correctly 1`] = `ShallowWrapper {}`;
+exports[`Spinner renders correctly 1`] = `
+"<Fragment>
+  <img className=\\"spinner\\" src=\\"spinner.gif\\" alt=\\"Loading...\\" />
+</Fragment>"
+`;
